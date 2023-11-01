@@ -11,9 +11,6 @@ from employees;
 
 -- 3. Display the ename concatenated with the job ID, separated by a comma and space, and name the column Employee and Title
 
-SELECT first_name , last_name||', '||job_id,  "Employee and Title" 
-from employees;
-
 SELECT concat(first_name," ", job_id) 
 from employees;
 
@@ -24,9 +21,6 @@ from employees
 where  job_id like "%_clerk" ;
 
 -- 5. Create a query to display all the data from the EMP table. Separate each column by a comma. Name the column THE OUTPUT.
-
-select employee_id||" , "||manager_id||"  "||phone_number
-from employees;
 
 select concat(employee_id," ",manager_id," ",phone_number)" the output "
 from employees;
@@ -211,10 +205,6 @@ from employees;
 -- 3.4 30. Display the employee ID by Appending two zeros after 2nd digit and 'E' in the end,
 -- department id, salary and the manager name all in Upper case, if the Manager name
 -- consists of 'z' replace it with '$!
-
-SELECT CONCAT(SUBSTRING(employee_id, 1, 2), "00",SUBSTRING(employee_id, 3), "E") 
-AS modified_employee_id, department_id ,salary
-FROM employees;
 
 select concat(substring(e.employee_id,1,2), "00" ,substring(e.employee_id,3),"E") 
 as "New_EMP_id", e.department_id,e.salary,REPLACE(m.last_name,"Z","$")"Replace Name"
