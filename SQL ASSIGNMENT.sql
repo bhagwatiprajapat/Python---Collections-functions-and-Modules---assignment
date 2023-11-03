@@ -63,10 +63,10 @@ where manager_id is null;
 
 -- 12. Display the last  name, job, and salary for all employees whose job is sales representative or 
 -- stock clerk and whose salary is not equal to $2,500, $3,500, or $5,000Module 4 (SQL)
-
+ 
 select job_title, last_name, salary
 from jobs join employees using (job_id)
-where job_title like "%stock_clerk" 
+where job_title like "%stock_clerk" or job_title like "%Sales Representative"
 and salary not in (2500,3500,5000);
 
 -- 2.1 13.Display the maximum, minimum and average salary and commission earned.
