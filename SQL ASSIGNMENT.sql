@@ -97,7 +97,7 @@ group by department_id;
 select first_name, last_name, commission_pct
 from employees 
 where commission_pct is null
-order by first_name;
+order by 1;
 
 -- 2.6 18.Display the employees name, department id and commission. If an Employee doesn't
 -- earn the commission, then display as 'No commission'. Name the columns appropriately
